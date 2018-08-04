@@ -1,0 +1,13 @@
+#!!()作用
+!!(a) 将a强制转化布尔类型  
+使用例子：  
+```
+var foo        //undefined
+alert(!foo)    //undefined情况下一个感叹号返回的是true
+goo = null     //null
+alert(!goo)    //null情况下一个感叹号返回的也是true
+var o = {flag:true}
+var test = !!o.flag  //等效于var test = o.flag || false
+alert(test)    //true
+```
+两个感叹号的作用就在于，若明确设置了变量的值（非null/undefined/0等值），结果就会根据变量的实际值来返回，如果没有设置，结果就会返回false。
