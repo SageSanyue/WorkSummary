@@ -1,0 +1,9 @@
+##input输入框在vue项目中用到的几种事件  
+例1  
+```
+<input type="text" :value="name" @input="onInput" @focus="onFocus" @blur="onBlur" />
+```
+例2
+```
+<input v-on:keyup.enter="submit" v-on:focus="onFocus">
+```
