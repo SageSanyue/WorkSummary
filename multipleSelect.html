@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>原生js实现多选</title>
+    <style>
+        * {
+            color: #409EFF;
+        }
+    </style>
+</head>
+<body>
+    <input id="cheakAll" type="checkbox">全选
+    <div id="inputWrap">
+        <input type="checkbox" value="上海"/>上海
+        <input type="checkbox" value="北京"/>北京
+        <input type="checkbox" value="广州"/>广州
+        <input type="checkbox" value="深圳"/>深圳
+        <input type="checkbox" value="苏州"/>苏州
+    </div>
+    <script>
+        var cheakAllBtn = document.getElementById('cheakAll')
+        var wrap = document.getElementById('inputWrap')
+        var buttons = wrap.getElementsByTagName('input')
+        var counter = 0
+
+        function mutipleCheck() {
+            cheakAllBtn.onclick = function() {
+                // console.log('checked', this.checked)
+                for (let i = 0; i < buttons.length; i++) {
+                    if (this.checked == true) {
+                        buttons[i].checked = true
+                        counter = buttons.length
+                    } else {
+                        buttons[i].checked = false
+                        counter = 0
+                    }
+                }
+            }
+            
+            for(let i = 0; i < buttons.length; i++) {
+                buttons[i].onclick = function() {
+                    // console.log('[i].checked', this.checked, i)
+                    if (this.checked == true) {
+                        counter++
+                    } else {
+                        counter--
+                    }
+                    if (counter == buttons.length) {
+                        cheakAllBtn.checked = true
+                    } else {
+                        cheakAllBtn.checked = false
+                    }
+                }
+            }
+        }
+        
+        mutipleCheck()
+    </script>
+</body>
+</html>
