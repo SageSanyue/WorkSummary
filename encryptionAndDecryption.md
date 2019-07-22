@@ -52,7 +52,8 @@ created() {
   console.log(this.$utils.forgeDecrypt('MVqah3VDBNzLzsYdkWW/xQ=='), '解密试验') // 控制台打印出“123456”
 }
 ```
-效果图：[![1563772888(1).jpg](https://i.loli.net/2019/07/22/5d3547e84905450070.jpg)](https://i.loli.net/2019/07/22/5d3547e84905450070.jpg)
+效果图：[![1563772888(1).jpg](https://i.loli.net/2019/07/22/5d3547e84905450070.jpg)](https://i.loli.net/2019/07/22/5d3547e84905450070.jpg)  
+
 4.真正写业务代码  
 ```
 <template>
