@@ -1,5 +1,6 @@
 # 明文加解密  
-## 后端加密方法已定：AES+ECB+PKCS5的方式；公钥已定：HFQDATAREPORT19!  
+## 后端定好加密方案，前端配合
+后端加密方法已定：AES+ECB+PKCS5的方式；公钥已定：HFQDATAREPORT19!  
 例如：123456加密后是MVqah3VDBNzLzsYdkWW/xQ==
 (注：但据资料显示：" AES加密模式：这里我们选择的是ECB(ee cc block)模式。这是AES所有模式中最简单也是最不被人推荐的一种模式，因为它的固定的明文对应的是固定的密文，很容易被破解。")  
 我们可以先去在线工具上体验一下加解密：[在线验证工具](https://www.keylala.cn/aes)  
@@ -51,7 +52,7 @@ created() {
   console.log(this.$utils.forgeDecrypt('MVqah3VDBNzLzsYdkWW/xQ=='), '解密试验') // 控制台打印出“123456”
 }
 ```
-效果图：![开发者工具中打印出](https://i.loli.net/2019/07/22/5d3547e84905450070.jpg)  
+效果图：![控制台](https://i.loli.net/2019/07/22/5d3547e84905450070.jpg)  
 4.真正写业务代码  
 ```
 <template>
