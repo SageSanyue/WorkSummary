@@ -1,6 +1,6 @@
 # sessionStorage和localStorage区别  
 (1)localStorage是专为浏览器端缓存而设计的，  
-优点：  
+优点：
 
   * 存储量增大至5MB（由浏览器决定）
   * 不会带到HTTP请求中（只有本地浏览器可访问数据，服务器不能访问本地存储除非特意通过POST或GET通道发送到服务器）
