@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #F6F6F8;
+    font-family: Helvetica, Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+
+/* 1.顶栏导航部分-topNavbar */
+.topNavBar {
+    height: 70px;
+    line-height:70px;
+    background-color: #fff;
+    position: relative;
+    overflow:hidden;
+}
+.layout {
+    width:1200px;
+    margin:0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.top-title {
+    width: 200px;
+    float: left;
+    font-size: 17px;
+    font-weight: 600;
+}
+.top-title img {
+    vertical-align: middle;
+    margin-right:10px;
+}
+.top-link {
+   float:right;
+}
+.top-link a{
+    padding-left:20px;
+}
+.link-title {
+    color: #89939F;
+    font-size: 16px;
+    line-height: 24px;
+    display: inline-block;
+    margin-right: 20px;
+}
+.link-item {
+    line-height: 24px;
+    display: inline-block;
+    margin-right: 38px;
+}
+.link-item a {
+    font-size: 17px;
+}
+a {
+    color: #232C37;
+    text-decoration: none;
+}
+a:hover {
+    color: #3A5FFB;
+    text-decoration: underline;
+}
+
+/* 2.顶部banner部分-banner */
+.banner {
+    min-width: 1200px;
+    height: 400px;
+    background: linear-gradient(to right, #52a4ff 0%, #5758ff 100%);
+}
+.banner .layout {
+    height: 400px;
+    width: 1200px;
+    min-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.big-word {
+    font-size: 40px;
+    line-height: 56px;
+    color: #fff;
+    font-weight: 500;
+    margin: 102px 0 40px 20px;
+}
+.small-word {
+    width: 511px;
+    font-size: 16px;
+    color: #EEF3FF;
+    line-height: 29px;
+    margin-left:20px;
+}
+.img-banner {
+    width: 40%;
+    position: absolute;
+    right: 0;
+    bottom: 54px;
+}
+
+/* 3.中部主体内容 main-wrap */
+.main-wrap {
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+.main-title {
+    width: 112px;
+    height: 40px;
+}
+.title-word {
+    color: #232C37;
+    font-size: 28px;
+    line-height: 40px;
+}
+.title-decorate {
+    height: 62px;
+}
+.blue-bar {
+    margin-top: 17px;
+    width: 45px;
+    height: 5px;
+    border-radius: 4px;
+    background-color: #3A5FFB;
+}
+/* 3.1 展示项容器 main-container */
+.main-container {
+    width:1250px;
+    float: left;
+}
+/* 3.1.1 每一个大方格 */
+.main-item {
+    width: 385px;
+    height: 385px;
+    margin:0 20px 20px 0;
+    background-color: #fff;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+.beta-img {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.main-single {
+    width: 130px;
+    height: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius:100%;
+}
+.main-single img {
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+}
+.big-title {
+    display: flex;
+    justify-content: center;
+    height: 28px;
+    margin-top: 18px;
+    color: #232C37;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: bold;
+}
+.small-title {
+    margin-top: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 21px;
+    color: #232C37;
+    font-size: 15px;
+    line-height: 21px;
+    text-align: center;
+}
+.item-desc {
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 331px;
+    height: 72px;
+    color: #89939F;
+    font-size: 13px;
+    line-height: 24px;
+    text-align: center;
+}
+a.button {
+    width: 104px;
+    height: 34px;
+    display: block;
+    line-height:34px;
+    font-size:14px;
+    font-weight: 600;
+    text-align: center;
+    margin: 25px auto 0;
+    border-radius: 4px;
+}
+a.btn-org:hover {
+    color:#F5670B;
+    text-decoration: none;
+}
+a.btn-blue:hover {
+    color:#3A5FFB;
+    text-decoration: none;
+}
+.btn-org {
+    border: 1px solid #F5670B;
+    color:#F5670B;
+}
+.btn-blue {
+    color:#3A5FFB;
+    border: 1px solid #3A5FFB;
+}
+
+/* wechatMiniPro类的葵花码容器 */
+.inner-items-active {
+    width: 100%;
+    height: 0;
+    background-color: #fff;
+    position: absolute;
+    left:0;
+    bottom:0;
+    opacity: 0;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+}
+.inner-items-active .small-title {
+    height: 27px;
+}
+.inner-items-active .items-scan  {
+    text-align: center;
+    margin-top:10px;
+}
+.inner-items-active .items-scan img {
+    vertical-align: middle;
+    width:210px;
+    height:210px;
+    overflow:hidden;
+}
+.inner-items-active p {
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+    margin-top:30px;
+}
+/* wechatMiniPro类别的按钮悬浮动作添加class */
+.active {
+    display: block;
+    -webkit-transform: translate3d(0, -2px, 0);
+    transform: translate3d(0, -2px, 0);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+.active .inner-items-active {
+    height: 100%;
+    opacity: 1;
+    background-color: #fff;
+}
+
+/* 3.1.2 最后一个大方格-更多敬请期待 */
+.more .main-single {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    color:#bcc3cc;
+    text-align: center;
+    line-height: 90px;
+    font-size: 24px;
+    background-color: #f6f6f8;
+}
+.more-item-app {
+    color:#bcc3cc;
+    text-align: center;
+    margin-top:50px;
+}
+
+/* 4.页尾 footer */
+.footer {
+    height: 62px;
+    background-color: #fff;
+}
+.foot-wrap {
+    margin-left: auto;
+    margin-right: auto;
+    width: 563px;
+    height: 24px;
+    color: #89939F;
+    font-size: 13px;
+    line-height: 24px;
+    transform: translateY(19px);
+}
+
+
+
+
+
+
