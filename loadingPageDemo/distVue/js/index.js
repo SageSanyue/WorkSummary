@@ -26,13 +26,12 @@
     methods: {
         addActive(index, type) {
             if (type == 2) {
-                console.log(111)
-                $(`.main-item.inner${index}`).addClass('active');
+                document.querySelector(`.main-item.inner${index}`).classList.add('active')
             }
         },
         removeActive(index, type) {
             if (type == 2) {
-                $('.main-item').removeClass('active');
+                document.querySelector(`.main-item.inner${index}`).classList.remove('active')
             }
         }
        
