@@ -1,0 +1,50 @@
+$.each(that.list, function(index, item){
+    content += '
+    <div class="main-item inner' + index + '" data-type="' + item.type + '" >'
+        if (item.isBeta == 1) {
+            content += '
+            <img class="beta-img" src="./img/beta.png" width=65 height=28 alt="beta">'
+        }             
+         content +=   
+            '<div class="inner-items">
+                <div class="main-single">
+                    <img src="'  + item.logoPicUrl + '" />
+                </div>
+                <div class="big-title">
+                    <span class="yzg-title">' + item.name + '</span>
+                </div>
+                <div class="small-title">
+                    <span class="yzg-slogan">' + item.slogan + '</span>
+                </div>
+                <div class="item-desc">
+                    <p class="yzg-desc">' + item.desc + '</p>
+                </div>'
+                if (item.type == 1) {
+                    content += '
+                <a class="button btn-blue" target="_blank" href="' + item.jumpUrl + '">立即体验</a>'
+                } else if (item.type == 2) {
+                    content += '
+                <a class="button btn-org" href="javascript:;">立即体验</a>'
+                }
+                content += '
+            </div>
+            <div class="inner-items-active">
+                <div class="big-title">
+                    <span class="yzg-title">' + item.name + '</span>
+                </div>
+                <div class="small-title">
+                    <span class="yzg-slogan">' + item.slogan + '</span>
+                </div>
+                <div class="items-scan">
+                    <img src="' + item.qrCodePicUrl + '" />
+                </div>
+                <p>微信扫码 立即体验</p>
+            </div>
+    </div>'
+})
+content += 
+   '<div class="main-item more">
+       <div class="main-single">...</div>
+       <p class="more-item-app">更多应用，敬请期待！</p>
+    </div>'
+$("#main-container").html(content);

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>落地页</title>
+    <link rel="stylesheet" href="./css/index.css?v=123">
+    <link rel="shortcut icon" href="./img/logo.jpeg" />
+</head>
+<body>
+<div id="index" class="wrap" v-cloak>
+
+    <div class="topNavBar">
+        <div class="layout">
+            <div class="top-title">
+                <img src="./img/miniCode.jpg" width=34 height=34 alt="logo">
+                <span class="title-desc">PC落地页Demo</span>
+            </div>
+            <div class="top-link">
+                <span class="link-title">友情链接：</span>
+                <a href="//www.zhihu.com" target="_blank">知乎</a>
+                <a href="/www.google.com" target="_blank">谷歌</a>
+                <a href="//www.github.com" target="_blank">github</a>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="layout">
+            <h2 class="big-word">
+                开启数字化经营新时代
+            </h2>
+            <p class="small-word">
+                致力于以科技力量推动开启数字化经营新时代开启数字化经营新时代开启数字化经营新时代开启数字化经营新时代开启数字化经营新时代开启数字化经营新时代开启数字化经营新时代
+                <span class="small-fold">开启数字化经营新时代、开启数字化经营新时代、AI、开启数字化经营新时代</span>
+                开启数字化经营新时代！
+            </p>
+            <img class="img-banner" src="//js.tuguaishou.com/img/index/computer.png" alt="">
+        </div>
+    </div>
+    <div class="main-wrap layout">
+        <div class="main-title">
+            <span class="title-word">产品展示</span>
+        </div>
+        <div class="title-decorate">
+            <div class="blue-bar"></div>
+        </div>
+        <div class="main-container">
+            <div class="main-item"
+                :class=`inner${index}` 
+                v-for="(item, index) in list"
+                :key="item.appId"
+                @mouseover="addActive(index, item.type)" 
+                @mouseout="removeActive(index, item.type)"
+            >
+                <img v-if="item.isBeta == 1" class="beta-img" src="./img/beta.png" width=65 height=28 alt="beta">
+                <div class="inner-items">
+                    <div class="main-single"><img :src="item.logoPicUrl" alt="图片" /></div>
+                    <div class="big-title">
+                        <span>{{item.name}}</span>
+                    </div>
+                    <div class="small-title">
+                        <span>{{item.slogan}}</span>
+                    </div>
+                    <div class="item-desc">
+                        <p>{{item.desc}}</p>
+                    </div>
+                    <a v-if="item.type == 1" class="button btn-blue" target="_blank" :href="item.jumpUrl">立即体验</a>
+                    <a v-else-if="item.type == 2" class="button btn-org" href="javascript:;">立即体验</a>
+                </div>
+                <div class="inner-items-active">
+                    <div class="big-title">
+                        <span>{{item.name}}</span>
+                    </div>
+                    <div class="small-title">
+                        <span>{{item.slogan}}</span>
+                    </div>
+                    <div class="items-scan">
+                            <img :src="item.qrCodePicUrl" />
+                    </div>
+                    <p>微信扫码 立即体验</p>
+                </div>
+            </div>
+            <div class="main-item more">
+                <div class="main-single">...</div>
+                <p class="more-item-app">更多应用，敬请期待！</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="foot-wrap">
+            <span>xxxxxxxxxx有限公司 · 京ICP备0000000号-1 · 京公网安备 0000000000号</span>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.6.9/vue.min.js"></script>
+<script src="../data/data.js"></script>
+<script src="./js/index.js"></script>  
+</body>
+</html>
